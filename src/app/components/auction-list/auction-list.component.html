@@ -1,0 +1,4 @@
+<div class='sidenav'>
+    <!-- <span (click)='newDoc()'>New Document</span> -->
+    <span [class.selected]='auction.id === currentAuctionId' (click)='loadAuction(auction.id)' *ngFor='let auction of auctions | async'>{{ auction.name }}</span>
+</div>

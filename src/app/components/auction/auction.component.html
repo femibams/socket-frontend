@@ -1,0 +1,12 @@
+
+<form>
+    <h1>{{ auction.name }}</h1>
+    <h2>Current Bids</h2>
+    <ul class="">
+    <li *ngFor="let bid of auction.bids">
+        <span class="">{{ bid.userId }} - </span>{{ bid.amount }}
+    </li>
+    </ul>
+    <input type="number" [formControl]="amount" required>
+    <input type="submit" (click)='addBid()' value='Bid'>
+</form>
